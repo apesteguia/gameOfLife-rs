@@ -10,6 +10,6 @@ git clone https://github.com/apesteguia/gameOfLife-rs.git
 ```bash
 cd gameOfLife-rs && cargo run 
 ```
-
+## Screenshots
 ![screenshot.png](screenshot.png)
 
