@@ -3,7 +3,7 @@
 ## Instalation
 
 #### Clone the repository
-```
+```bash
 git clone https://github.com/apesteguia/gameOfLife-rs.git
 ```
 #### Now run it
