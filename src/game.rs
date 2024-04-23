@@ -1,19 +1,19 @@
 use rand::Rng;
 
-#[derive(Clone, Copy, PartialEq, Eq)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum State {
     Dead,
     Alive,
 }
 
-#[derive(Clone)]
+#[derive(Debug, Clone)]
 pub struct Cell {
     pub state: State,
 }
 
-impl Cell {
-    pub fn new(state: State) -> Self {
-        Self { state }
+impl Default for Cell {
+    fn default() -> Self {
+        Self { state: State::Dead }
     }
 }
 
@@ -28,7 +28,7 @@ impl World {
     pub fn new(size: usize) -> Self {
         let mut cells: Vec<Vec<Cell>> = Vec::with_capacity(size);
         for _ in 0..size {
-            let row: Vec<Cell> = vec![Cell::new(State::Dead); size];
+            let row: Vec<Cell> = vec![Cell::default(); size];
             cells.push(row);
         }
 
