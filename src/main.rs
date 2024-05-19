@@ -26,10 +26,10 @@ fn main() {
             for j in 1..SIZE - 1 {
                 if w.cells[i][j].state == State::Alive {
                     d.draw_rectangle(
-                        (i as i32 * PIXEL) as i32,
-                        (j as i32 * PIXEL) as i32,
-                        PIXEL as i32,
-                        PIXEL as i32,
+                        i as i32 * PIXEL,
+                        j as i32 * PIXEL,
+                        PIXEL,
+                        PIXEL,
                         Color::WHITE,
                     );
                 }
